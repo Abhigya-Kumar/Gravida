@@ -1,0 +1,5 @@
+# Core FER dependencies (already in requirements.txt)
+# Install both files: pip install -r requirements.txt -r requirements-api.txt
+
+flask>=2.3.0
+flask-cors>=4.0.0
