@@ -14,7 +14,9 @@ import { geminiGenerate, parseGeminiJSON } from '../lib/gemini';
 // ── Constants ────────────────────────────────────────────────────────────────
 const CAPTURE_DURATION_SEC = 10;
 const CAPTURE_INTERVAL_MS  = 1000;
-const FER_API_URL          = '/api/fer/analyze';
+const FER_API_URL = import.meta.env.VITE_FER_API_URL
+  ? `${import.meta.env.VITE_FER_API_URL}/analyze`
+  : '/api/fer/analyze';
 
 // API key is read from .env → VITE_GEMINI_API_KEY (set by Vite at build time)
 // No key needed here — gemini.js reads it internally.
